@@ -1,0 +1,118 @@
+1)Generate first N number of Fibonacci numbers. Take N value from 
+
+nterms = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+if nterms <= 0:
+   print("Please enter a positive integer")
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
+       
+#output:-How many terms? 7
+#Fibonacci sequence:
+#0
+#1
+#1
+#2
+#3
+#5
+#8
+
+2)Take 10 integers from keyboard using loop and print their average value on the screen 
+
+print("Input some integers to calculate their average. Input 0 to exit.")
+count = 0
+sum = 0.0
+number=1
+while number !=0:
+	number = int(input(""))
+	sum = sum + number
+	count += 1
+if count == 0:
+	print("Input some numbers")
+else:
+	print("Average of the above numbers are: ", sum / (count-1))
+	
+#output:-Input some integers to calculate their average.input 0 to exit.
+#2
+#3
+#4
+#5
+#6
+#7
+#8
+#9
+#4
+#5
+#0
+#Average of above numbers are:5.3
+	 
+3 )Print the   following patterns using loop : 
+#     * 
+#     ** 
+#     *** 
+#     **** 
+
+i = 1
+while i<=4:
+  print ("*"*i)
+  i = i+1
+  
+#output:-
+#     * 
+#     ** 
+#     *** 
+#     **** 
+
+4)Write a program to find the length of the string "refrigerator" without using len( ) function. 
+
+a = "refrigerator"
+count = 0
+for i in a:
+  count = count+1
+print (count)
+
+#output:-12
+
+5) Write a Python program to count the number of characters (character frequency) in a string.
+
+def char_frequency(str1):
+    dict = {}
+    for n in str1:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
+print(char_frequency('google.com'))
+
+#output:-{'o': 3, '.': 1, 'g': 2, 'l': 1, 'e': 1, 'c': 1, 'm': 1}
+
+6)Write a Python script that takes input from the user and displays that input back in upper and lower cases
+
+user_input = input("What's your favourite language:")
+print("My favourite language is ", user_input.upper())
+print("My favourite language is ", user_input.lower())
+
+#output:-What's your favourite language:english                                                                       
+#My favourite language is  ENGLISH                                                                             
+#My favourite language is  english 
+
+7) Write a Python program to count occurrences of a substring in a string.
+
+str1 = 'The quick brown fox jumps over the lazy dog.'
+print()
+print(str1.count('fox'))
+
+#output:-1
